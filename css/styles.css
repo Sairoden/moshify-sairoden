@@ -508,8 +508,8 @@ a {
 
 /* Callouts */
 .callout {
-  padding: 4rem;
   border-radius: 5px;
+  padding: 4rem;
 }
 
 .callout--primary {
@@ -519,13 +519,13 @@ a {
 
 .callout__heading {
   color: #fff;
-  margin-top: 0;
   font-size: 3rem;
+  margin-top: 0;
 }
 
 .callout .btn {
-  justify-self: center;
   align-self: center;
+  justify-self: center;
 }
 
 .callout__content {
@@ -546,4 +546,36 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsible */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
