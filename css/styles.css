@@ -204,10 +204,18 @@ a {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0;
+  outline: 0;
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn--primary {
@@ -288,7 +296,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -324,11 +332,19 @@ a {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #be895e;
+}
+
 .card--secondary .badge--secondary {
-  background: var(--color-accent);
+  background: #fa684e;
 }
 
 /* Plans */
+.plan {
+  transition: transform 0.2s ease-out;
+}
+
 .plan__name {
   color: #fff;
   font-size: 2.4rem;
@@ -358,6 +374,10 @@ a {
   margin-bottom: 2rem;
 }
 
+.plan--popular {
+  transform: scale(1.1);
+}
+
 .plan--popular .card__header {
   position: relative;
 }
@@ -369,6 +389,14 @@ a {
   right: 5%;
   top: -6px;
   width: 40px;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 /* 1024 / 16 */
@@ -709,4 +737,40 @@ a {
     align-self: center;
     text-align: left;
   }
+}
+
+/* Domain Block */
+.block-domain .input-group {
+  border: 0;
+  box-shadow: 0 0 30px 20px #e6ebee;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  font-size: 2rem;
+  font-weight: 600;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* 768px / 16 */
+@media only screen and (min-width: 48em) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* Plans block */
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  margin: 0 auto;
+  max-width: 500px;
 }
